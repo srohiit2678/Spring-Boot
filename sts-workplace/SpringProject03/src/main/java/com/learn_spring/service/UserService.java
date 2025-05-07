@@ -8,10 +8,10 @@ public interface UserService {
 
 	User createUser(User user);
 	/*
-	//List<User> getAlluser();
+	List<User> getAlluser();
 	
-	//User updateUser(String id,User user);
+	User updateUser(String id,User user);
 	
-	//User deleteUser(String id);
+	User deleteUser(String id);
 	*/
 }
