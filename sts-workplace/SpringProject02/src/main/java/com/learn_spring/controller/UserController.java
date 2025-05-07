@@ -12,7 +12,7 @@ public class UserController {
 		return "Rohit Ojha";
 	}
 
-	@GetMapping("/Items")
+	@GetMapping("/items")
 	public String getAllItems()
 	{
 		List<String> li = new ArrayList<>();
@@ -31,7 +31,7 @@ public class UserController {
 	}
 	
 	@GetMapping("/filters/{id}")
-	public String getItemId(@PathVariable String id)
+	public String getItemByPath(@PathVariable String id)
 	{
 		List<String> li = new ArrayList<>();
 		li.add("1-Item");
@@ -57,8 +57,8 @@ public class UserController {
 		return li.toString();
 	}
 	
-	@GetMapping("/filters")
-	public String getId(@RequestParam(required = false)String id)
+	@PostMapping("/filters")
+	public String getItem(@RequestParam(required = false)String id)
 	{
 		List<String> li = new ArrayList<>();
 		li.add("1-Item");
