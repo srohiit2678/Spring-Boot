@@ -8,7 +8,7 @@ public interface UserService {
 
 	User createUser(User user);
 	
-	List<User> getAlluser();
+	List<User> getAllUsers();
 	
 	User updateUser(String id,User user);
 	

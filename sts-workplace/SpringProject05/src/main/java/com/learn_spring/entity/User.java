@@ -1,5 +1,9 @@
 package com.learn_spring.entity;
 
+import org.springframework.web.bind.annotation.*;
+
+import com.learn_spring.exception.UserNotFoundException;
+
 public class User {
 
 	private String id;
@@ -52,6 +56,11 @@ public class User {
 		this.password = password;
 	}
 	
+	@ExceptionHandler(UserNotFoundException.class)
+	public String handleUserNotFoundException(UserNotFoundException ex)
+	{
+		return "plese provide valid User id..";
+	}
 	
 	
 }

@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.ArrayList;
 import com.learn_spring.entity.*;
+import com.learn_spring.exception.UserNotFoundException;
 import com.learn_spring.service.*;
 
 @Service
@@ -17,7 +18,7 @@ public class UserServiceImpl implements UserService {
 		return user;
 	}
 	@Override
-	public List<User> getAlluser() {		
+	public List<User> getAllUsers() {		
 		return userList;
 	}
 	@Override
@@ -27,12 +28,12 @@ public class UserServiceImpl implements UserService {
 			if(findUser.getId().equals(id))
 			{
 				findUser.setName(user.getName());
-				findUser.getName(user.getUserName());
-				findUser.getPassword()user.getPassword());
+				findUser.setUserName(user.getUserName());
+				findUser.setPassword(user.getPassword());
 				return findUser;
 			}
 		}
-		return null;
+		throw new UserNotFoundException("invalid id...");
 	}
 	@Override
 	public User deleteUser(String id) {
@@ -43,7 +44,7 @@ public class UserServiceImpl implements UserService {
 				userList.remove(findUser);
 			}
 		}
-			return null;
+		throw new UserNotFoundException("invalid id...");
 	}
 	
 }
