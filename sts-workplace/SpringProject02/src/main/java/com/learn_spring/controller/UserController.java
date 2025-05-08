@@ -66,7 +66,6 @@ public class UserController {
 		li.add("9-Item"); li.add("10-Item");
 		
 		List<String> service = new ArrayList<>();
-		
 		service.add("Frutes"); service.add("vegitables"); service.add("Protine");
 		service.add("Electorics"); service.add("Cloths"); service.add("Beauty Products");
 		service.add("Sports Hub"); service.add("Toys"); service.add("Home Services");
@@ -77,15 +76,12 @@ public class UserController {
 		{
 			for(String s1 : li)
 			{
-				if(s1.contains(id))
-					item = s1;
+				if(s1.contains(id))	item = s1;
 			}
 			for(String s2 : service)
 			{
-				if(s2.contains(name))
-					return item +" --> "+ s2;
+				if(s2.contains(name)) return item +" --> "+ s2;
 			}
-			
 			return "No Match Found";
 		}
 		return li.toString();
