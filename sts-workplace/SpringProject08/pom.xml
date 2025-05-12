@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.learn-spring</groupId>
-	<artifactId>SpringProject07</artifactId>
+	<artifactId>SpringProject08</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringProject07</name>
+	<name>SpringProject08</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -47,6 +47,7 @@
 			<scope>test</scope>
 		</dependency>
 		
+				
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -68,6 +69,7 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>

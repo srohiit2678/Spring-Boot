@@ -6,15 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.learn_spring.entity.User;
-import com.learn_spring.serviceimpl.UserServiceImpl;
-
+import com.learn_spring.service.UserService;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
 
 	@Autowired
-	UserServiceImpl userService;
+	UserService userService;
+	
 	
 	@PostMapping("/register")
 	public User createUser(@RequestBody User user)
@@ -23,25 +23,15 @@ public class UserController {
 	}
 	
 	@GetMapping("/all")
-	public List<User> getAllUsers()
+	List<User> getAllUsers()
 	{
 		return userService.getAllUsers();
 	}
 	
-	@PutMapping("/update/{id}")
-	public User updateUser(@PathVariable String id,@RequestBody User user)
-	{
-		return userService.updateUser(id, user);
-	}
-	
 	@DeleteMapping("/delete/{id}")
-	public User deleteUser(@PathVariable String id){
+	public User deleteUser(@PathVariable String id)
+	{
 		return userService.deleteUser(id);
 	}
 	
-	@GetMapping("/find")
-	public List<User> findUser(@RequestParam String name)
-	{
-		return userService.getUserByName(name);
-	}
 }
