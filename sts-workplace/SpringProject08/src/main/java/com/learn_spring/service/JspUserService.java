@@ -1,8 +1,7 @@
 package com.learn_spring.service;
 
-import java.util.List;
-
 import com.learn_spring.entity.JspUser;
+
 
 public interface JspUserService {
 

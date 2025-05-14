@@ -27,10 +27,8 @@ public class ViewController {
 	}
 	
     @PostMapping("/register")
-    public String registerUser(@RequestParam String id,
-                               @RequestParam String name,
-                               @RequestParam String userName,
-                               @RequestParam String password) {
+    public String registerUser(@RequestParam String id,@RequestParam String name,@RequestParam String userName,
+    							@RequestParam String password) {
 
     	System.out.println(id+name+userName+password);
         JspUser user = new JspUser();

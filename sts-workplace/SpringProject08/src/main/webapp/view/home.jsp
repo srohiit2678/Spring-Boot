@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%@ page import="com.spring_learn.entity.JspUser" %>
+ <%@ page import="com.learn_spring.entity.JspUser" %>
 
 <!DOCTYPE html>
 <html>
@@ -9,7 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+<center>
+
 <% JspUser user = (JspUser)request.getAttribute("jspUser"); %>
-<h1>Welcome <%= user.getName() %>></h1>
+<h1>Welcome <%= user.getName() %></h1>
+<h1>userName: <%= user.getUserName() %></h1>
+
+</center>
 </body>
 </html>

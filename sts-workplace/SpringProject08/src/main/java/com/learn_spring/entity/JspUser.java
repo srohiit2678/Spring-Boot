@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 @Entity
 public class JspUser {
 
-	@Id
+	@Column
 	private String id;
 	@Column
 	private String name;
