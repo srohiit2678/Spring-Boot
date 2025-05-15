@@ -9,12 +9,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<center>
-
+		<h2>Welcome TO Home Page</h2>
 <% JspUser user = (JspUser)request.getAttribute("jspUser"); %>
-<h1>Welcome <%= user.getName() %></h1>
-<h1>userName: <%= user.getUserName() %></h1>
-
-</center>
+<table>
+<tr>
+<td>name: </td> <td><%= user.getName() %></td>
+</tr>
+<tr>
+<td>userName:</td> <td> <%= user.getUserName() %></td>
+</tr>
+</table>
 </body>
 </html>
